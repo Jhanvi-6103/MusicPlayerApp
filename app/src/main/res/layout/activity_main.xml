@@ -1,0 +1,139 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Placeholder for song title -->
+    <TextView
+        android:id="@+id/songTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Song Title"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Album Art -->
+    <ImageView
+        android:id="@+id/albumArt"
+        android:layout_width="380dp"
+        android:layout_height="510dp"
+        android:layout_below="@id/songTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/alagasaman"
+        android:scaleType="centerCrop" />
+
+    <!-- Progress Bar for Song -->
+    <SeekBar
+        android:id="@+id/songProgress"
+        android:layout_width="390dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/albumArt"
+        android:layout_marginTop="30dp"
+        android:max="100"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/songDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songProgress"
+        android:layout_centerHorizontal="true"
+        android:text="00:00"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
+
+    <!-- Playback Controls -->
+    <LinearLayout
+        android:id="@+id/controlPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp">
+
+        <!-- Rewind Icon and Text -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/rewindButton"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:background="@color/white"
+                android:src="@drawable/rewind" />
+        </LinearLayout>
+
+        <!-- Decrease 10 seconds Icon and Text -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+            <ImageButton
+                android:id="@+id/decreaseButton"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:background="@color/white"
+                android:src="@drawable/decrease" />
+        </LinearLayout>
+
+        <!-- Pause/Resume Icon and Text -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+            <ImageButton
+                android:id="@+id/pauseButton"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:src="@drawable/pause" />
+        </LinearLayout>
+
+        <!-- Increase 10 seconds Icon and Text -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+            <ImageButton
+                android:id="@+id/increaseButton"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:background="@color/white"
+                android:src="@drawable/increase" />
+
+        </LinearLayout>
+
+        <!-- Next Icon and Text -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+            <ImageButton
+                android:id="@+id/nextButton"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:src="@drawable/next" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
